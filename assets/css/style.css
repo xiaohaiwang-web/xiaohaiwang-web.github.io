@@ -6,11 +6,13 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(to bottom, #e8f4fc, #ffffff);
+    max-width: 1200px;          /* 页面最大宽度，可根据喜好调整 */
+    margin: 0 auto;             /* 上下边距0，左右自动 -> 居中 */
     min-height: 100vh;
     display: flex;
-    flex-direction: row;   /* 左右布局关键 */
+    flex-direction: row;
+    background: transparent;    /* 背景已在 html 上设置，body 透明即可 */
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);  /* 可选：给整体加一点阴影，更突出居中效果 */
 }
 
 /* ========== 左侧栏 ========== */
