@@ -6,10 +6,8 @@ url: "https://xiaohaiwang-web.github.io"
 baseurl: ""
 
 author: Kai/一只小海王
-avatar: asset/avatar.jpg   # 如果还没有头像图片，请暂时注释掉这行
+avatar: assets/avatar.jpg
 
 social:
   github: xiaohaiwang-web
-  email: ZWzw1844645405@163.com   # 只留一个邮箱
-  # twitter: 你的twitter用户名   # 如果没有就删掉
-  # linkedin: 你的linkedin用户名 # 如果没有就删掉
+  email: ZWzw1844645405@163.com
