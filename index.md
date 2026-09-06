@@ -1,6 +1,7 @@
 ---
-layout: about
-title: 关于我
+layout: single
+title: "关于我"
+author_profile: true
 ---
 
 # 👋 你好，我是 Kai/一只小海王
