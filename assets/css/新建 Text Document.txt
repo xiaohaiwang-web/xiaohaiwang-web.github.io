@@ -1,0 +1,55 @@
+/* 项目卡片网格 */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* 单个卡片 */
+.project-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    flex: 1 1 280px;          /* 卡片最小宽度280px，自动换行 */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.project-card h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.project-card h3 a:hover {
+    color: #1a73e8;
+}
+
+.project-desc {
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.project-tech {
+    font-size: 0.85rem;
+    color: #888;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-tech span {
+    background: #eef2f6;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+}
