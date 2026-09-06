@@ -1,10 +1,6 @@
 ## 🚀 精选项目
 
 <div class="project-grid">
-    <div align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=xiaohaiwang-web&show_icons=true&theme=default" alt="GitHub Stats" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiaohaiwang-web&layout=compact" alt="Top Languages" />
-    </div>
 
   <div class="project-card">
     <h3><a href="https://github.com/xiaohaiwang-web/bone-age-prediction" target="_blank">骨龄预测小工具</a></h3>
