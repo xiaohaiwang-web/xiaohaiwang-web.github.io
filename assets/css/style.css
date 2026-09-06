@@ -1,4 +1,23 @@
-/* 项目卡片网格 */
+/* 页面背景：浅蓝到白渐变 */
+body {
+    background: linear-gradient(to bottom, #e8f4fc, #ffffff) !important;
+}
+
+/* 左侧栏右边框（竖线） */
+header {
+    border-right: 1px solid #d0d7de !important;
+    padding-right: 1.5rem !important;
+}
+
+/* 头像圆形 */
+header img {
+    border-radius: 50% !important;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* 项目卡片 */
 .project-grid {
     display: flex;
     flex-wrap: wrap;
@@ -6,13 +25,12 @@
     margin-top: 1rem;
 }
 
-/* 单个卡片 */
 .project-card {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 1.5rem;
-    flex: 1 1 280px;          /* 卡片最小宽度280px，自动换行 */
+    flex: 1 1 280px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -32,7 +50,7 @@
 }
 
 .project-card h3 a:hover {
-    color: #1a73e8;
+    color: #0366d6;
 }
 
 .project-desc {
@@ -41,11 +59,11 @@
 }
 
 .project-tech {
-    font-size: 0.85rem;
-    color: #888;
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+    font-size: 0.85rem;
+    color: #666;
 }
 
 .project-tech span {
