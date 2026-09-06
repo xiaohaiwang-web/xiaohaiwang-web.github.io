@@ -11,3 +11,6 @@ avatar: assets/avatar.jpg
 social:
   github: xiaohaiwang-web
   email: ZWzw1844645405@163.com
+
+plugins:
+  - jekyll-remote-theme
