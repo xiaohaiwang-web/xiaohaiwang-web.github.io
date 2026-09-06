@@ -1,16 +1,24 @@
-remote_theme: YoussefRaafatNasry/portfolYOU
+remote_theme: mmistakes/minimal-mistakes
 
 title: Kai/一只小海王
 description: 想为大家开发好玩软件的小朋友
 url: "https://xiaohaiwang-web.github.io"
 baseurl: ""
 
-author: Kai/一只小海王
-avatar: assets/avatar.jpg
+author:
+  name: "Kai/一只小海王"
+  avatar: "assets/avatar.jpg"
+  bio: "想为大家开发好玩软件的小朋友"
+  location: "中国 · 合肥"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/xiaohaiwang-web"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:ZWzw1844645405@163.com"
+    - label: "Bilibili"
+      icon: "fab fa-fw fa-bilibili"
+      url: "https://space.bilibili.com/489281042"
 
-social:
-  github: xiaohaiwang-web
-  email: ZWzw1844645405@163.com
-
-plugins:
-  - jekyll-remote-theme
+# 其他配置保持默认即可
