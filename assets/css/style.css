@@ -4,8 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    background: linear-gradient(to bottom, #e8f4fc, #ffffff);
+    min-height: 100%;
+}
 
 body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     max-width: 1200px;          /* 页面最大宽度，可根据喜好调整 */
     margin: 0 auto;             /* 上下边距0，左右自动 -> 居中 */
     min-height: 100vh;
