@@ -1,6 +1,7 @@
 ---
-layout: projects
-title: 我的项目
+layout: single
+title: "我的项目"
+author_profile: true
 permalink: /projects/
 ---
 
