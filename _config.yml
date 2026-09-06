@@ -4,7 +4,7 @@ description: 想为大家开发好玩软件的小朋友
 description: |
   想为大家开发好玩软件的小朋友  
   <a href="mailto:...">📧 Email</a> | 
-  <a href="https://github.com/xiaohaiwang-web">🐙 GitHub</a> | 
-  <a href="https://space.bilibili.com/...">📺 Bilibili</a>
+  <a href="https://github.com/xiaohaiwang-web">GitHub</a> | 
+  <a href="https://space.bilibili.com/489281042">Bilibili</a>
 logo: assets/avatar.jpg   # 左侧头像（如果有图片）
 include: ["assets/css/style.css"]
