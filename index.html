@@ -1,99 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KaiHaven/一只小海王 - 个人主页</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10111d">
+  <meta name="description" content="XIAOHAIWANG 的个人开发者主页，记录软件项目、AI 实验与持续构建的作品。">
+  <meta property="og:title" content="XIAOHAIWANG — PLAYER 01">
+  <meta property="og:description" content="A developer's little arcade on the internet.">
+  <meta property="og:type" content="website">
+  <title>XIAOHAIWANG — PLAYER 01</title>
+  <link rel="stylesheet" href="./assets/css/arcade.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2310111d'/%3E%3Cpath d='M7 7h18v18H7z' fill='%23a8f06a'/%3E%3Cpath d='M12 12h3v3h-3zm6 0h3v3h-3zM13 19h6v2h-6z' fill='%2310111d'/%3E%3C/svg%3E">
+  <script defer src="./assets/js/arcade.js"></script>
 </head>
 <body>
-    <!-- 左侧个人资料栏 -->
-    <aside class="sidebar">
-        <img src="assets/avatar.jpg" alt="头像" class="avatar">
-        <h1 class="name">KaiHaven/一只小海王</h1>
-        <p class="bio">想为大家开发好玩软件的小朋友</p>
-        <p class="location">Mincraft · 主世界</p>
-        <div class="social-links">
-            <a href="https://github.com/xiaohaiwang-web" target="_blank" title="GitHub">GitHub</a>
-            <a href="mailto:ZWzw1844645405@163.com" title="Email">📧 Email</a>
-            <a href="https://space.bilibili.com/489281042" target="_blank" title="Bilibili">Bilibili</a>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="回到首页">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span>XIAOHAI<span class="brand-dot">.</span>DEV</span>
+      </a>
+      <div class="top-status">
+        <span class="status-led" aria-hidden="true"></span>
+        <span id="connection-status">SYSTEM READY</span>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="主导航">
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#stack">STACK</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> PLAYER PROFILE <span class="eyebrow-version">PORTFOLIO / 01</span></div>
+          <p class="hero-kicker">HELLO, PLAYER ONE.</p>
+          <h1>把想法写成代码，<br><span>让作品自己说话。</span></h1>
+          <p class="hero-description">你好，我是 <strong id="hero-name">XIAOHAIWANG</strong>。一个喜欢探索 AI 与软件开发的创造者，正在把有趣的想法变成真正能运行的工具。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects"><span aria-hidden="true">▶</span> VIEW PROJECTS</a>
+            <a class="button button-ghost" href="https://github.com/xiaohaiwang-web" target="_blank" rel="noreferrer">GITHUB PROFILE <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-footnote"><span class="blink-dot">●</span> CURRENT QUEST: BUILD / LEARN / REPEAT</div>
         </div>
-        <p style="margin-top: 1.5rem; color: #555; font-size: 0.9rem;">你是一个高手</p>
-        <img src="assets/mc.apng" alt="小动画" style="width: 100%; max-width: 200px; border-radius: 8px; margin-top: 1.5rem; display: block; margin-left: auto; margin-right: auto;">
-    </aside>
 
-    <!-- 右侧内容区 -->
-    <main class="content">
-        <section class="intro">
-            <h2>我是 KaiHaven/一只小海王</h2>
-            <p>一个想为大家开发好玩软件的小朋友，喜欢开发桌面工具和自动化脚本。</p>
-            <div class="tech-tags">
-                <span>Python</span>
-                <span>PySide6</span>
-                <span>c/cpp</span>
-                <span>Linux</span>
-                <span>PowerShell</span>
+        <div class="hero-console" aria-label="街机玩家状态面板">
+          <div class="console-top"><span>ARCADE TERMINAL <b>///</b></span><span>NO. 0001</span></div>
+          <div class="console-screen">
+            <div class="screen-grid" aria-hidden="true"></div>
+            <div class="pixel-sprite" aria-hidden="true">
+              <svg viewBox="0 0 128 128" role="img">
+                <rect x="32" y="12" width="64" height="12" fill="#f2b36f"/>
+                <rect x="20" y="24" width="88" height="48" fill="#f2b36f"/>
+                <rect x="28" y="32" width="72" height="32" fill="#ffd6a1"/>
+                <rect x="36" y="40" width="12" height="12" fill="#25243a"/>
+                <rect x="80" y="40" width="12" height="12" fill="#25243a"/>
+                <rect x="52" y="56" width="24" height="8" fill="#d56f62"/>
+                <rect x="12" y="68" width="104" height="12" fill="#8e70dc"/>
+                <rect x="24" y="80" width="80" height="28" fill="#6a8fe8"/>
+                <rect x="32" y="108" width="24" height="12" fill="#f2b36f"/>
+                <rect x="72" y="108" width="24" height="12" fill="#f2b36f"/>
+                <rect x="4" y="48" width="12" height="20" fill="#ffd6a1"/>
+                <rect x="112" y="48" width="12" height="20" fill="#ffd6a1"/>
+                <rect x="40" y="88" width="8" height="8" fill="#a8f06a"/>
+                <rect x="80" y="88" width="8" height="8" fill="#a8f06a"/>
+              </svg>
             </div>
-        </section>
+            <div class="sprite-shadow"></div>
+            <div class="screen-caption">PLAYER 01 <span>READY</span></div>
+          </div>
+          <div class="console-stats">
+            <div><span class="stat-label">SCORE</span><strong id="score-value">000000</strong></div>
+            <div><span class="stat-label">LEVEL</span><strong>BUILDING</strong></div>
+            <div><span class="stat-label">LIVES</span><strong class="lives">♥ ♥ ♥</strong></div>
+          </div>
+          <a class="insert-coin" href="#projects"><span>▶</span> INSERT COIN TO EXPLORE</a>
+        </div>
+        <div class="hero-scroll" aria-hidden="true"><span></span> SCROLL TO CONTINUE</div>
+      </section>
 
-        <section class="projects">
-            <h2>我的项目</h2>
-            <div class="project-grid">
-                <!-- 项目1 -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/xiaohaiwang-web/BoneAge-Prediction-Tool" target="_blank">骨龄预测小工具</a></h3>
-                    <p class="project-desc">基于 EfficientNet-B4 与模糊集隶属度模块，预测误差 < 8 个月，ONNX 加速，开箱即用的 Windows 桌面应用。这是学校给的任务，悲~</p>
-                    <div class="project-tech">
-                        <span>Python</span><span>PyTorch</span><span>ONNX</span>
-                    </div>
-                </div>
+      <section class="stats-strip" aria-label="GitHub 项目概览">
+        <div class="strip-intro">PLAYER DATA <span>LIVE FROM GITHUB</span></div>
+        <div class="strip-stat"><strong id="stat-repos">—</strong><span>PUBLIC PROJECTS</span></div>
+        <div class="strip-stat"><strong id="stat-stars">—</strong><span>STARS EARNED</span></div>
+        <div class="strip-stat"><strong id="stat-languages">—</strong><span>LANGUAGES</span></div>
+        <div class="strip-end" aria-hidden="true">✦</div>
+      </section>
 
-                <!-- 项目2 -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/xiaohaiwang-web/HongguoDownload" target="_blank">红果短剧下载器</a></h3>
-                    <p class="project-desc">PySide6 开发的批量下载工具，支持按 ID/URL/名称搜索，多线程下载，界面美观。</p>
-                    <div class="project-tech">
-                        <span>Python</span><span>PySide6</span>
-                    </div>
-                </div>
-
-                <!-- 项目3 -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/xiaohaiwang-web/-" target="_blank">问卷星自动化填写脚本</a></h3>
-                    <p class="project-desc">Selenium 实现的问卷自动填写，支持多种题型、概率配置、多线程和代理。</p>
-                    <div class="project-tech">
-                        <span>Python</span><span>Selenium</span>
-                    </div>
-                </div>
-
-                <!-- 项目4 -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/xiaohaiwang-web/-Medical-Information-Management-System" target="_blank">医疗信息管理系统</a></h3>
-                    <p class="project-desc">这是一个用mysql+python开发的医疗信息管理系统。后续可能会进行更新，比如加入ai,重构ui,敬请期待吧</p>
-                    <div class="project-tech">
-                        <span>Python</span><span>MySQL</span>
-                    </div>
-                </div>
-
-                <!-- 项目5 -->
-                <div class="project-card">
-                    <h3><a href="https://github.com/xiaohaiwang-web/idea-" target="_blank">idea激活脚本</a></h3>
-                    <p class="project-desc">这是一个脚本，但是我给他打包成了exe,点击即用，激活idea全家桶</p>
-                    <div class="project-tech">
-                        <span>PowerShell</span>
-                    </div>
-                </div>
-
-                <!-- 项目6 -->
-                <!-- <div class="project-card">
-                    <h3><a href="https://github.com/xiaohaiwang-web/medical-system" target="_blank">医疗信息管理系统</a></h3>
-                    <p class="project-desc">这是一个用mysql+python开发的医疗信息管理系统。后续可能会进行更新，比如加入ai,重构ui,敬请期待吧</p>
-                    <div class="project-tech">
-                        <span>Python</span><span>MySQL</span>
-                    </div>
-                </div> -->
+      <section class="section about-section" id="about">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 / PLAYER PROFILE</p><h2>认识一下<span class="heading-accent">我。</span></h2></div>
+          <span class="section-index">[ ABOUT.EXE ]</span>
+        </div>
+        <div class="about-grid">
+          <article class="panel profile-panel">
+            <div class="panel-title"><span class="pixel-icon">◆</span> PLAYER CARD <span class="panel-code">ID: 0001</span></div>
+            <div class="profile-main">
+              <div class="profile-avatar" id="profile-avatar" aria-hidden="true">H</div>
+              <div><p class="profile-name" id="profile-display-name">XIAOHAIWANG</p><p class="profile-handle">@xiaohaiwang-web</p></div>
             </div>
-        </section>
+            <p class="profile-bio">热衷于把新技术变成可用的产品。关注 AI 应用、桌面软件与工程实践，在一次次构建中积累经验。</p>
+            <div class="profile-divider"></div>
+            <div class="profile-meta"><span>ROLE</span><strong>DEVELOPER / BUILDER</strong></div>
+            <div class="profile-meta"><span>FOCUS</span><strong>AI · SOFTWARE · TOOLS</strong></div>
+            <div class="profile-meta"><span>STATUS</span><strong class="available"><i></i> ALWAYS BUILDING</strong></div>
+          </article>
+          <article class="about-note">
+            <p class="note-label">A LITTLE BIT ABOUT MYSELF</p>
+            <h3>不只是在写代码，<br>更是在打造<span>有用的东西。</span></h3>
+            <p>我喜欢从一个具体的问题出发，研究技术方案，再把它做成可以被真实使用的软件。从 AI Agent、桌面应用到深度学习小工具，每个项目都是一次新的探索。</p>
+            <p>这里会持续记录我的作品、实验和学习轨迹。项目数据直接来自 GitHub，仓库有更新，这里的展示也会跟着更新。</p>
+            <a class="text-link" href="https://github.com/xiaohaiwang-web" target="_blank" rel="noreferrer">MORE ON GITHUB <span>↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / SAVE FILES</p><h2>最近在做的<span class="heading-accent">项目。</span></h2></div>
+          <a class="text-link desktop-link" href="https://github.com/xiaohaiwang-web?tab=repositories" target="_blank" rel="noreferrer">ALL REPOSITORIES <span>↗</span></a>
+        </div>
+        <div class="projects-toolbar">
+          <p>这里的项目由 GitHub 自动同步，无需手动维护列表。</p>
+          <div class="projects-tools"><span class="sync-indicator" id="sync-indicator">● CONNECTING</span><button class="refresh-button" id="refresh-projects" type="button" title="重新获取项目">↻ REFRESH</button></div>
+        </div>
+        <div class="project-grid" id="project-grid" aria-live="polite">
+          <div class="loading-card"><span class="loading-cube">▧</span><strong>LOADING PROJECTS...</strong><span>正在连接 GitHub 数据接口</span></div>
+        </div>
+        <div class="projects-bottom"><span id="project-count-label">FETCHING REPOSITORIES...</span><a class="button button-small button-ghost" href="https://github.com/xiaohaiwang-web?tab=repositories" target="_blank" rel="noreferrer">OPEN GITHUB <span>↗</span></a></div>
+      </section>
+
+      <section class="section stack-section" id="stack">
+        <div class="section-heading">
+          <div><p class="eyebrow">03 / POWER-UPS</p><h2>我的<span class="heading-accent">工具栏。</span></h2></div>
+          <span class="section-index">[ SKILL TREE ]</span>
+        </div>
+        <div class="stack-grid">
+          <article class="panel stack-panel">
+            <div class="panel-title"><span class="pixel-icon">✦</span> TECH DETECTED <span class="panel-code">AUTO</span></div>
+            <p class="stack-description">根据公开项目的语言信息自动统计。它反映的是项目使用情况，不是主观技能评分。</p>
+            <div class="language-list" id="language-list"><span class="language-placeholder">WAITING FOR GITHUB DATA...</span></div>
+          </article>
+          <article class="focus-panel">
+            <p class="note-label">CURRENT INTERESTS</p>
+            <div class="focus-item"><span>01</span><div><strong>AI APPLICATIONS</strong><small>Agent · LLM · Local AI</small></div><b>↗</b></div>
+            <div class="focus-item"><span>02</span><div><strong>SOFTWARE ENGINEERING</strong><small>C++ · Python · Tooling</small></div><b>↗</b></div>
+            <div class="focus-item"><span>03</span><div><strong>PRODUCT BUILDING</strong><small>Desktop · Web · Automation</small></div><b>↗</b></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-inner">
+          <p class="eyebrow">04 / NEXT LEVEL</p>
+          <h2>有趣的想法，<br><span>值得一起实现。</span></h2>
+          <p>欢迎看看我的项目，也欢迎通过 GitHub 和我交流。</p>
+          <a class="button button-primary" href="https://github.com/xiaohaiwang-web" target="_blank" rel="noreferrer">LET'S CONNECT <span>↗</span></a>
+          <div class="game-over">THANKS FOR PLAYING <span>★</span></div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark">H</span><span>XIAOHAI.DEV</span></a>
+      <span>© <span id="current-year"></span> XIAOHAIWANG · BUILT WITH CURIOSITY.</span>
+      <a href="https://github.com/xiaohaiwang-web" target="_blank" rel="noreferrer">GITHUB ↗</a>
+    </footer>
+  </div>
 </body>
 </html>
