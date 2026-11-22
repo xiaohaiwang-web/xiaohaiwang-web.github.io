@@ -11,7 +11,7 @@
   <title>XIAOHAIWANG — PLAYER 01</title>
   <link rel="stylesheet" href="./assets/css/arcade.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2310111d'/%3E%3Cpath d='M7 7h18v18H7z' fill='%23a8f06a'/%3E%3Cpath d='M12 12h3v3h-3zm6 0h3v3h-3zM13 19h6v2h-6z' fill='%2310111d'/%3E%3C/svg%3E">
-  <script defer src="./assets/js/arcade.js"></script>
+  <script defer src="./assets/js/arcade.js?v=3"></script>
 </head>
 <body>
   <div class="scanlines" aria-hidden="true"></div>
@@ -102,7 +102,10 @@
           <article class="panel profile-panel">
             <div class="panel-title"><span class="pixel-icon">◆</span> PLAYER CARD <span class="panel-code">ID: 0001</span></div>
             <div class="profile-main">
-              <div class="profile-avatar" id="profile-avatar" aria-hidden="true">H</div>
+              <div class="profile-avatar" id="profile-avatar">
+                <img src="https://github.com/xiaohaiwang-web.png?size=256" alt="XIAOHAIWANG 的头像" loading="lazy" referrerpolicy="no-referrer">
+                <span class="avatar-fallback" aria-hidden="true">H</span>
+              </div>
               <div><p class="profile-name" id="profile-display-name">XIAOHAIWANG</p><p class="profile-handle">@xiaohaiwang-web</p></div>
             </div>
             <p class="profile-bio">热衷于把新技术变成可用的产品。关注 AI 应用、桌面软件与工程实践，在一次次构建中积累经验。</p>
@@ -115,7 +118,7 @@
             <p class="note-label">A LITTLE BIT ABOUT MYSELF</p>
             <h3>不只是在写代码，<br>更是在打造<span>有用的东西。</span></h3>
             <p>我喜欢从一个具体的问题出发，研究技术方案，再把它做成可以被真实使用的软件。从 AI Agent、桌面应用到深度学习小工具，每个项目都是一次新的探索。</p>
-            <p>这里会持续记录我的作品、实验和学习轨迹。项目数据直接来自 GitHub，仓库有更新，这里的展示也会跟着更新。</p>
+            <p>这里会持续记录我的作品、实验和学习轨迹。</p>
             <a class="text-link" href="https://github.com/xiaohaiwang-web" target="_blank" rel="noreferrer">MORE ON GITHUB <span>↗</span></a>
           </article>
         </div>
@@ -127,7 +130,7 @@
           <a class="text-link desktop-link" href="https://github.com/xiaohaiwang-web?tab=repositories" target="_blank" rel="noreferrer">ALL REPOSITORIES <span>↗</span></a>
         </div>
         <div class="projects-toolbar">
-          <p>这里的项目由 GitHub 自动同步，无需手动维护列表。</p>
+          <p class="projects-intro">OPEN SOURCE <span>／</span> PROJECT ARCHIVE</p>
           <div class="projects-tools"><span class="sync-indicator" id="sync-indicator">● CONNECTING</span><button class="refresh-button" id="refresh-projects" type="button" title="重新获取项目">↻ REFRESH</button></div>
         </div>
         <div class="project-grid" id="project-grid" aria-live="polite">
